@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main" id="mainpart">
+            <h2>TO DO LIST </h2>
+            <input class="add-text" type="text " id="input-text" placeholder="Add your tasks here ">
+            <button onclick="addTask()" class="add-button">
+                Add
+            </button>
+            <div class="listcontainer">
+                <ul>
+                    <!--   <li><input class="checkedbox" type="checkbox" name="" id="check-box">task1</li>
+                    <li><input class="checkedbox" type="checkbox" name="" id="check-box">task1</li>
+                    <li><input class="checkedbox" type="checkbox" name="" id="check-box">task1</li>
+                    <li><input class="checkedbox" type="checkbox" name="" id="check-box">task1</li>    --> 
+                    
+                    
+                  </ul>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+*{
+    padding: 0%;
+    margin: 0px;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(36, 33, 33);
+    justify-content: center;
+    align-items: center;
+
+}
+.main{
+    background-color: rgb(58, 57, 57);
+    width: 50%;
+    height: fit-content;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+.main.h2{
+    justify-content: center;
+    text-align: center;
+}
+.add-text{
+    width: 300px;
+    height :30px;
+    border: none;
+    margin: 15px;
+    background-color: rgb(90, 86, 86);
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.add-button{
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    width: 70px;
+    height:30px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.listcontainer{
+    display: flex;
+}
+ul li{
+    color: white;
+    list-style: none;
+    padding: 10px 7px 10px 40px;
+    cursor: pointer;
+    user-select: none;
+}
+.checkedbox{
+    border: none;
+    border-radius: 50px;
+    width: 50px;
+    height: 5opx;
+    padding: 10px;
+
+}
+const checkBox=getElementById('check-box');
+const text=getElementById('input-text');
+
+checkBox.addEventListener('change',() => {
+    if (checkBox.checked){
+        text.style.textDecoration ='line-through'
+    } 
+    else {
+         text.style.textDecoration ='none'
+    }
+})
+ function addTask(){
+    if (text.value===''){
+        alert("you must enter the task")
+    } 
+    else {
+        let li= document.createElement('li');
+        li.innerHTML=text.value;
+        listcontainer.appendChild(li);
+    }
+
+ }
