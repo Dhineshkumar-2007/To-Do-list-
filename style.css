@@ -1,0 +1,105 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Setup */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(36, 33, 33);
+}
+
+/* Main Section Styling */
+.main {
+    background-color: rgb(58, 57, 57);
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+}
+
+/* Header Styling */
+.main h2 {
+    text-align: center;
+}
+
+/* Input Field */
+
+    .add-text {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(90, 86, 86);
+        color: white; /* Set the text color to white */
+        font-weight: bold; /* Make the text bold */
+        outline: none;
+    }
+    
+
+/* Button Styling */
+.add-button {
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* List Container */
+.listcontainer {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* List Item Styling */
+ul li {
+    list-style: none;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgb(90, 86, 86);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: larger;
+}
+
+/* Checkbox Styling */
+
+.checked {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    border-radius: 50%; /* Make the checkbox round */
+}
+
+
+/* Strike-through for completed tasks */
+.strikethrough {
+    text-decoration: line-through;
+}
+
+/* Delete Cross Button Styling */
+.delete-button {
+    background-color: transparent;
+    border: none;
+    color: rgb(209, 205, 205);
+    font-size: 18px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/* Delete Cross Button Hover Effect */
+.delete-button:hover {
+    color: darkred;
+}
